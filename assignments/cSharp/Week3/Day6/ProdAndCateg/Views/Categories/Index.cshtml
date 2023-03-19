@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Categories";
+}
+@model MyViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 border-end border-white">
+            @await Html.PartialAsync("_CategoryForm", Model.Category)
+            </div>
+        <div class="col-6">
+            @await Html.PartialAsync("_AllCategories", Model.AllCategories)            
+        </div>
+    </div>
+</div>

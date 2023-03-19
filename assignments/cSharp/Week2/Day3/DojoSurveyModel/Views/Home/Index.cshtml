@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <form method="POST" asp-controller="Home" asp-action="Survey">
+        <div>
+            <label for="Name">Your Name:</label>
+            <span asp-validation-for="Name"></span>
+            <input asp-for="Name">
+        </div>
+        <div>
+            <label >Dojo Location:</label>
+            <span asp-validation-for="Location"></span>
+            <select asp-for="Location">
+                <option value="here">Here</option>
+                <option value="there">There</option>
+                <option value="somewhere">Somewhere</option>
+                <option value="nowhere">Nowhere</option>
+            </select>
+        </div>
+    <div>
+        <label>Favorite Language:</label>
+        <span asp-validation-for="Language"></span>
+        <select asp-for="Language">
+            <option value="javascript">JavaScript</option>
+            <option value="cSharp">C#</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label>Birthday</label>
+        <span asp-validation-for="Birthday"></span>
+        <input asp-for="Birthday">
+    </div>
+    <div class="comment">
+        <label>Comment (optional):</label>
+        <span asp-validation-for="Comment"></span>
+        <textarea asp-for="Comment" cols="10" rows="10"></textarea>
+    </div>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

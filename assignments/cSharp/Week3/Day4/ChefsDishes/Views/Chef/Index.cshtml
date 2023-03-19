@@ -1,0 +1,35 @@
+@model List<Chef>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container text-center mt-5">
+    <h1 class="border-bottom border-dark mb-5">Check out our roster of chefs!</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th># of Dishes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(Chef chef in Model){
+                    int year = DateTime.Now.Year - chef.Birthday.Year;
+                    if((chef.Birthday.Month > DateTime.Now.Month) || (chef.Birthday.Month == DateTime.Now.Month && chef.Birthday.Day > DateTime.Now.Day)){
+                        year--;
+                    }
+                    <tr>
+                        <td>@chef.FirstName @chef.LastName</td>
+                        <td>@year</td>
+                        <td>@chef.AllDishes.Count</td>
+                    </tr>
+                    
+                    }
+            }
+        </tbody>
+
+    </table>
+</div>
+@{
+}

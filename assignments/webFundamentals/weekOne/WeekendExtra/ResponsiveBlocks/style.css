@@ -1,0 +1,122 @@
+.wrapper{
+    width: 100%;
+}
+.green-block{
+    width: 100%;
+    height: 150px;
+    background-color: green;
+}
+.red-block{
+    height: 450px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0;
+}
+main{
+    display: flex;
+}
+.top{
+    display: flex;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    width: 100%;
+    height: 150px;
+    background-color: purple;
+}
+@media only screen and (max-width: 480px){
+    .red-block{
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .blue-block{
+        display: none;
+    }
+    .top{
+        flex-direction: column;
+    }
+    .yellow{
+        width: 100%;
+        height: 150px;
+        margin:0;
+        margin-bottom: 15px;
+    }
+    .purple{
+        height: 150px;
+    }
+    .bottom{
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 481px){
+    .blue-block{
+        display: none;
+    }
+    .red-block{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .top{
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .yellow{
+        height: 250px;
+        width: 45%;
+        margin: 2.5%;
+    }
+    .purple{
+        width: 97%;
+        margin: 1.5%;
+    }
+    .green-block{
+        margin: 20px 0 20px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .blue-block{
+        display: unset;
+        width: 30%;
+        height:500px;
+        background-color: blue;
+        margin: 0px;
+        margin-top: 20px;
+    }
+    .red-block{
+        width: 70%;
+        height: 650px;
+        margin: 20px;
+        margin-right: 0;
+    }
+    .yellow{
+        width: 30%;
+        height: 250px;
+        margin: 1.6%;
+    }
+    .green-block{
+        height: 250px;
+        margin: 0;
+    }
+    .bottom{
+        display: flex;
+        height: 400px;
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 35px;
+        align-items: flex-start;
+    }
+    .purple{
+        margin-top: 50px;
+        height: 55%;
+    }
+}
+

@@ -1,0 +1,18 @@
+@model List<Category>
+
+<div class="container">
+    <h1 class="text-center">All Categories</h1>
+    <ul class="list-unstyled">
+        @{
+                foreach (var category in Model)
+                {
+                    <li class="mb-3">
+                        <a asp-controller="Categories"
+                        asp-action="View"
+                        asp-route-categoryId="@category.CategoryId"
+                        >@category.Name</a>
+                    </li>    
+                }
+            }
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+Microsoft Windows [Version 10.0.22000.1455]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\lsnow>dotnet --version
+6.0.405
+
+C:\Users\lsnow>cd OneDrive\Desktop
+
+C:\Users\lsnow\OneDrive\Desktop>mkdir NewProject
+
+C:\Users\lsnow\OneDrive\Desktop>cd NewProject
+
+C:\Users\lsnow\OneDrive\Desktop\NewProject>dotnet new console
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Users\lsnow\OneDrive\Desktop\NewProject\NewProject.csproj...
+  Determining projects to restore...
+  Restored C:\Users\lsnow\OneDrive\Desktop\NewProject\NewProject.csproj (in 58 ms).
+Restore succeeded.
+
+
+
+C:\Users\lsnow\OneDrive\Desktop\NewProject>dotnet run
+Hello, World!
+
+C:\Users\lsnow\OneDrive\Desktop\NewProject>

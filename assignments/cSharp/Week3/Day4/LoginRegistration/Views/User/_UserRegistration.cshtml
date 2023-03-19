@@ -1,0 +1,41 @@
+@model User
+
+<form asp-action="Register" asp-controller="User" method="Post">
+    
+    <div class="mb-3 row">
+        <label asp-for="FirstName" class="col-sm-4 col-form-label"></label>
+        <div class="col-sm-8 mb-3">
+            <input asp-for="FirstName" class="form-control"/>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="LastName" class="col-sm-4 col-form-label"></label>
+        <div class="col-sm-8 mb-3 ">
+            <input asp-for="LastName" class="form-control"/>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="Email" class="col-sm-4 col-form-label"></label>
+        <div class="col-sm-8 mb-3">
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="Password" class="col-sm-4 col-form-label"></label>
+        <div class="col-sm-8 mb-3">
+            <input asp-for="Password" class="form-control"/>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="PasswordConfirm" class="col-sm-4 col-form-label"></label>
+        <div class="col-sm-8 mb-3">
+            <input asp-for="PasswordConfirm" class="form-control"/>
+            <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+        </div>
+    </div>
+    <button class="btn btn-success btn-md mt-3">Register</button>
+</form>

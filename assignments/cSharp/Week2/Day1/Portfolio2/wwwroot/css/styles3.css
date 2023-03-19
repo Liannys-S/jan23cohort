@@ -1,0 +1,28 @@
+body {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body nav {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.5em;
+}
+body nav .this {
+  text-decoration: none;
+  color: black;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+}
+body form input[type=submit] {
+  width: 30%;
+  margin-left: 60%;
+  margin-top: 1em;
+}

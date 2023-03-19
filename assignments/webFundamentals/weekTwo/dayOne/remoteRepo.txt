@@ -1,0 +1,13 @@
+1. Log in to github and create new public repository
+2. copy url 
+
+git clone <url>
+cd basic_repo
+mkdir test
+cd test
+touch index.html style.css scripts.js
+cd ../
+git add .
+git commit -m 'first commit'
+git push
+

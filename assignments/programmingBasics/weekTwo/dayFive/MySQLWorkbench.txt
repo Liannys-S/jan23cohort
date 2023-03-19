@@ -1,0 +1,6 @@
+use dealership;
+insert into salespersons (firstName, lastName) values ('Timmy','Turner');
+select * from salespersons where lastName = 'Turner';
+update salespersons set firstName = 'Billy' where id = 5;
+select * from salespersons;
+delete from salespersons where id = 5;

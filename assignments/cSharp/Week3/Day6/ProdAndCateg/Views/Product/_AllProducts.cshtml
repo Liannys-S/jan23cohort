@@ -1,0 +1,18 @@
+@model List<Product>
+
+<div class="container">
+    <h1 class="text-center">All Products</h1>
+    <ul class="list-unstyled">
+        @{
+                foreach (var product in Model)
+                {
+                    <li class="mb-3">
+                        <a asp-controller="Product"
+                        asp-action="View"
+                        asp-route-productId="@product.ProductId"
+                        >@product.Name</a>
+                    </li>
+                }
+            }
+    </ul>
+</div>

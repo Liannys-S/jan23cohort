@@ -1,0 +1,45 @@
+@model ChefAndDish
+
+<div class="container text-center mt-5">
+    <form asp-action="Add" asp-controller="Dish" method="POST">
+        <div class="row text-start">
+            <div class="col">    
+                    <div class="mb-3">
+                        <label asp-for="Dish.Name" class="form-label">Name of Dish</label>
+                        <input asp-for="Dish.Name" class="form-control" type="text">
+                        <span asp-validation-for="Dish.Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Dish.Calories" class="form-label"># of Calories</label>
+                        <input asp-for="Dish.Calories" class="form-control" type="number">
+                        <span asp-validation-for="Dish.Calories" class="text-danger"></span>
+                    </div>
+            </div>
+            <div class="col">
+                    <label asp-for="Dish.ChefId" class="form-label">Chef</label>
+                    <select asp-for="Dish.ChefId" class="form-select">
+                        @{
+                        foreach (Chef chef in Model.Chef)
+                        {
+                            <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+                        }
+                        }
+                    </select>
+                    <span asp-validation-for="Dish.ChefId" class="text-danger"></span>
+            </div>
+            <div class="col">
+                    <label asp-for="Dish.Tastiness" class="form-label">Tastiness</label>
+                    <select asp-for="Dish.Tastiness" class="form-select">
+                        <option selected>Choose...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span asp-validation-for="Dish.Tastiness" class="text-danger"></span>
+                    <div class="mt-3 text-end"><button class="btn btn-primary">Submit</button></div>
+            </div>
+        </div>
+    </form>
+</div>

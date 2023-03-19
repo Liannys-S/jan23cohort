@@ -1,0 +1,12 @@
+use users;
+insert into users (firstName, lastName, email) values
+ ('Liannys', 'Sanchez','Liannys@email.com'),
+ ('Emily','Vazquez','Emily@email.com'),
+ ('Joslyn','Shumard','Joslyn@email.com');
+ select * from users;
+ select * from users where email = 'Liannys@email.com';
+ select * from users where id = 3;
+ update users set lastName = 'Pancakes' where id = 3;
+ delete from users where id = 2;
+ select * from users order by firstName;
+ select * from users order by firstName desc;

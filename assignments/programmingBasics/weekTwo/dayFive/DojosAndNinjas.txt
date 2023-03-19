@@ -1,0 +1,20 @@
+insert into dojos (name) values ("Coding Dojo"),("Writing Dojo"),("Rumble Dojo");
+delete from dojos where id <= 3; 
+insert into dojos (name) values ("Coding Dojo"),("Writing Dojo"),("Rumble Dojo");
+insert into ninjas (firstName, lastName, age, dojo_id) values
+('Liannys','Sanchez',25,4),
+('Emily','Vazquez',22,4),
+('Joslyn','Shumard',22,4);
+insert into ninjas (firstName, lastName, age, dojo_id) values
+('Maria','Lopez',25,5),
+('Selena','Spool',22,5),
+('Cynthia','Grey',22,5);
+insert into ninjas (firstName, lastName, age, dojo_id) values
+('Jules','Perez',25,6),
+('Julia','Jackson',22,6),
+('Meredith','Mora',22,6);
+select * from ninjas where dojo_id = 4;
+select * from ninjas where dojo_id = 6;
+select dojos.name from ninjas 
+left join dojos on dojos.id = dojo_id
+where ninjas.id = 15;

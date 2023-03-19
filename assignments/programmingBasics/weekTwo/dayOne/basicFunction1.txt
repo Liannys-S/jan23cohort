@@ -1,0 +1,130 @@
+Score : 15/15
+
+1.
+Expected output: 35
+Actual output: 35
+
+2.
+Expected output: 8
+Actual output: 8
+
+3.
+Expected output: 6
+Actual output: 6
+
+4.
+Expected output: 
+3
+9                
+Actual output:
+3
+9
+
+5.
+Expected output: 40
+Actual output: 40
+
+6.
+Expected output: 4
+Actual output: 4
+
+7.
+Expected output: 
+10, 3
+30
+Actual output:
+10, 3
+30
+
+8.
+Expected output: 
+3
+4
+Actual output:
+3
+4
+
+9.
+Expected output:
+2
+5
+8
+11
+Actual output:
+2
+5
+8
+11
+
+10.
+Expected output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+Actual output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+11.
+Expected output: nothing, the function was not called
+Actual output:
+
+12.
+Expected output: nothing, the function was not called
+Actual output:
+
+13.
+Expected output: 10
+Actual output: 10
+
+14.
+Expected output:
+15
+10
+Actual output:
+15
+10
+
+15.
+Expected output:
+15
+15
+Actual output:
+15 
+15

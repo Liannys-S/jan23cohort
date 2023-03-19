@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChefsDishes</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChefsDishes.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="container my-5 justify-content-center d-flex">
+        <ul class="nav fs-5">
+            <li class="nav-item border-end border-white">
+                <a class="nav-link" href="/">Chefs</a>
+            </li>
+            <li class="nav-item border-end border-white">
+                <a class="nav-link" href="/dishes">Dishes</a>
+            </li>
+            <li class="nav-item border-end border-white">
+                <a class="nav-link" href="/chefs/new">Add a Chef</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dishes/new">Add a Dish</a>
+            </li>
+        </ul>
+    </nav>
+    @RenderBody()
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

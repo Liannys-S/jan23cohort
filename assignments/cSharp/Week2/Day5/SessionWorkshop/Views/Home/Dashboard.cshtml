@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="row justify-content-center mt-3">
+    <div class="col-10">
+                <h1 class="display-3">Welcome @Model!</h1>
+    </div>
+    <form asp-action="Logout" asp-controller="Home" method="POST" class="col-2 d-flex align-item-center mb-4 mt-4">
+        <div>
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </div>
+    </form>
+    <hr>
+</div>
+<div class="row text-center">
+    <h1 class="display-1">22</h1>
+</div>
+<div class="row align-items-center justify-content-center mt-3">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-warning customButton" type="button">+ 1</button>
+        <button class="btn btn-danger customButton" type="button">- 1</button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-info customButton" type="button">x 2</button>
+        <button class="btn btn-success customButton" type="button">+ Random</button>
+    </div>
+</div>

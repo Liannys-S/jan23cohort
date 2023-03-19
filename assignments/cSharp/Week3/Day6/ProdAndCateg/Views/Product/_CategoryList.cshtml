@@ -1,0 +1,8 @@
+@model Product
+
+<h1>Categories</h1>
+@{
+    foreach(var category in Model.CatAssociation){
+        <h3>@category.Category.Name</h3>
+    }
+}

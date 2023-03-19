@@ -1,0 +1,15 @@
+cd Onedrive\Desktop
+mkdir test
+ls
+cd test
+touch index.html style.css
+git init 
+git status
+git add index.html
+git commit -m 'update html'
+git add style.css
+git commit -m 'update css'
+git log
+git revert 540ecb7 
+git add style.css
+git commit -m 'recommit css'

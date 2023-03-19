@@ -1,0 +1,12 @@
+commands used (Windows cmd)
+- cd
+- mkdir
+- touch
+- copy
+- cd ..
+- move
+- erase 
+- dir
+- rd /s
+- rd /s /q 
+- type
