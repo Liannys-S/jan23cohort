@@ -19,38 +19,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container mt-5">
-		<h1 class="display-3">All Burgers</h1>
-		<table class="table table-striped table-bordered mb-5">
-			<thead>
-				<tr>
-					<th scope="col">Burger Name</th>
-					<th scope="col">Restaurant Name</th>
-					<th scope="col">Rating (out of 5)</th>
-					<th scope="col">Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var = "i" items="${allBurgers}">
-					<tr>
-						<td>${i.burgerName}</td>
-						<td>${i.restaurantName}</td>
-						<td>${i.rating}</td>
-						<td class="d-flex justify-content-center align-items-center">
-							<a href="/burgers/edit/${i.getId()}">Edit</a>
-							<form action="/burgers/delete/${i.getId()}" method="post">
-								<input type="hidden" name="_method" value="delete">
-								<button class="btn btn-link">Delete</button>
-							</form>
-							
-						</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		
-		<h1 class="display-3">Add a Burger:</h1>
-		<form:form action="/burgers/create" method="post" modelAttribute="burger" class="col-6">
+	<div class="container">
+		<h1 class="display-3">Edit a Burger:</h1>
+		<form:form action="/burgers/update/${burger.getId()}" method="post" modelAttribute="burger" class="col-6">
+			<input type="hidden" name="_method" value="put">
 			<div class="mt-3">
 				<form:label path="burgerName" class="form-label">Burger Name</form:label>
 				<form:input path="burgerName" class="form-control"/>
@@ -71,7 +43,7 @@
 				<form:textarea path="notes" class="form-control"></form:textarea>
 				<form:errors path="notes" class="text-danger"/>
 			</div>
-			<button class="btn btn-primary btn-lg mt-5 float-end">Submit</button>
+			<button class="btn btn-primary btn-lg mt-5 float-end">Update</button>
 		</form:form>
 	</div>
 </body>
